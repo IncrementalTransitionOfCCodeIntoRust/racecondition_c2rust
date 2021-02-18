@@ -1,0 +1,27 @@
+[workspace]
+members = [
+]
+
+[package]
+name = "racecondition_c2rust"
+authors = ["C2Rust"]
+version = "0.0.0"
+publish = false
+edition = "2018"
+autobins = false
+
+[lib]
+name = "racecondition_c2rust"
+path = "lib.rs"
+crate-type = ["staticlib", "rlib"]
+
+
+[[bin]]
+path = "src/racecondition.rs"
+name = "racecondition"
+
+[dependencies]
+libc = "0.2"
+
+
+
